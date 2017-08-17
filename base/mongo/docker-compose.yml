@@ -1,0 +1,7 @@
+version : '3'
+services:
+  dbsrv_base:
+    build:
+      context: .
+      dockerfile: ./make.dockerfile
+    container_name: mongo_base

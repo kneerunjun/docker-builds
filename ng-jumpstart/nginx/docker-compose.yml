@@ -1,0 +1,15 @@
+version: '3'
+services:
+  ngjumpstart-nginx:
+    container_name: ngjumpstart
+    build:
+      context: /home/kneerunjun/docker-builds/base/nginx
+      dockerfile: build.dockerfile
+      args:
+        - SITENAME=ngjumpstart
+        - PORT=8036
+    volumes:
+      - /var/src/ngjumpstart/www:/var/www/ngjumpstart
+      - /var/www/node_modules/:/var/www/libs
+    ports:
+      - "8036:8036"
