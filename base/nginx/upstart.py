@@ -7,7 +7,7 @@ cmd ="useradd nginx"
 subprocess.call(cmd.split())
 config="""
 server {
-    #this is the specific port on which we are making the ecolight website accessible
+    #this is the specific port on which we are making website available on
 	listen {0} ;
 	root /var/www/{1};
 	# Make site accessible from http://localhost/

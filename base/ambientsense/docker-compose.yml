@@ -1,15 +1,15 @@
 version : '3'
 services:
-  websrv_base:
+  nginx:
     build:
       context: ./
-      dockerfile: ./build.dockerfile
+      dockerfile: ./nginx.dockerfile
       args:
-        - SITENAME=samplesite
+        - SITENAME=ambientsense
         - PORT=8080
-    container_name: nginx_base
+    container_name: ambientsense_nginx
     volumes:
-      - /var/src/samplesite/www:/var/www/samplesite
+      - /var/src/samplesite/www:/var/www/ambientsense
       - /var/www/node_modules:/var/www/libs
     ports:
       - "8080:8080"
